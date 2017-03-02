@@ -1,0 +1,119 @@
+<style lang="scss">
+.collapse{
+  $header-background: #f7f7f7;
+  $lightgray: #c5c9d0;
+
+  margin-bottom: 2px;
+  .collapse-header{
+    padding: 20px 20px 20px 40px;
+    background: $header-background;
+    border-radius: 3px;
+    position: relative;
+    & > div{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    h3{
+      font-size: 0.938em;
+      font-weight: bold;
+    }
+
+    &::before{
+      -moz-transition:    all .2s;
+      -o-transition:      all .2s;
+      -webkit-transition: all .2s;
+      transition:         all .2s;
+
+      content: ">";
+      position: absolute;
+      font-size: 0.4em;
+      top: calc(50% - 0.4em);
+      left: 20px;
+      color: $lightgray;
+    }
+  }
+
+  &.is-active{
+    .collapse-header{
+      &::before{
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  .collapse-content-box{
+    -moz-transition:    all .2s;
+    -o-transition:      all .2s;
+    -webkit-transition: all .2s;
+    transition:         all .2s;
+
+    padding: 30px 40px;
+    border-left: 2px solid $header-background;
+    border-bottom: 2px solid $header-background;
+    border-right: 2px solid $header-background;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+}
+
+</style>
+
+<template>
+  <div class="collapse collapse-item" :class="{ 'is-active': active }">
+    <div class="collapse-header touchable" role="tab" :aria-expanded="active ? 'true' : 'fase'" @click.prevent="toggle">
+      <slot name="collapse-header"></slot>
+    </div>
+    <transition name="fade">
+      <div class="collapse-content" v-if="active">
+        <div class="collapse-content-box">
+          <slot name="collapse-body"></slot>
+        </div>
+      </div>
+    </transition>
+  </div>
+</template>
+
+<script>
+
+export default {
+  name: "Collapse",
+
+  data(){
+    return {
+      active: false
+    }
+  },
+
+  props: {
+    selected: {
+      type: Boolean,
+      required: true,
+      default: false
+    }
+  },
+
+  created () {
+    this._isCollapseItem = true
+    this.active = this.selected
+  },
+  ready () {
+    if (this.active) {
+      this.$emit('collapse-open', this.index)
+    }
+  },
+  methods: {
+    toggle () {
+      this.active = !this.active
+      if (this.active) {
+        this.$emit('collapse-open', this.index)
+      }
+    }
+  }
+}
+</script>

@@ -1,0 +1,25 @@
+{
+  "name": "vue-collapse",
+  "version": "1.0.0",
+  "description": "A simple collapse component for vue.js",
+  "main": "./main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cezardasilva/vue-collapse.git"
+  },
+  "keywords": [
+    "vue",
+    "vue-component",
+    "vue-collapse",
+    "collapse"
+  ],
+  "author": "Cezar Alexandre",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cezardasilva/vue-collapse/issues"
+  },
+  "homepage": "https://github.com/cezardasilva/vue-collapse#readme",
+  "peerDependencies": {
+    "vue": "2.x.x"
+  }
+}
