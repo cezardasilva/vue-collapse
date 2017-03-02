@@ -1,6 +1,6 @@
 {
   "name": "vue-collapse",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple collapse component for vue.js",
   "main": "./main.js",
   "repository": {
