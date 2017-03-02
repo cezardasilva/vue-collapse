@@ -22,7 +22,7 @@
   -o-transition: all .2s;
   -webkit-transition: all .2s;
   transition: all .2s;
-  content: ">";
+  content: url('../arrow-down.svg');
   position: absolute;
   font-size: 0.4em;
   top: calc(50% - 0.4em);
