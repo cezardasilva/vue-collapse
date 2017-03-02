@@ -28,6 +28,11 @@
   top: calc(50% - 0.4em);
   left: 20px;
   color: #c5c9d0;
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 .collapse.is-active .collapse-header::before {
   -moz-transform: rotate(0deg);
