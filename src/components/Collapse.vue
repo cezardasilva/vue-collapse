@@ -58,7 +58,7 @@
 
 <template>
   <div class="collapse collapse-item" :class="{ 'is-active': active }">
-    <div class="collapse-header touchable" role="tab" :aria-expanded="active ? 'true' : 'fase'" @click.prevent="toggle">
+    <div class="collapse-header touchable" role="tab" :aria-expanded="active ? 'true' : 'false'" @click.prevent="toggle">
       <slot name="collapse-header"></slot>
     </div>
     <transition name="fade">
