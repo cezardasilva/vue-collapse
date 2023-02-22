@@ -1,4 +1,6 @@
-# Vue Collapse [![npm](https://img.shields.io/npm/dt/vue-collapse.svg)]() [![npm](https://img.shields.io/npm/v/vue-collapse.svg)]() [![npm](https://img.shields.io/npm/l/vue-collapse.svg)]() [![GitHub stars](https://img.shields.io/github/stars/cezardasilva/vue-collapse.svg?style=social&label=Star)]()
+# Vue Collapse [![npm](https://img.shields.io/npm/dt/vue-collapse.svg)]() [![npm](https://img.shields.io/npm/v/vue-collapse.svg)]() [![npm](https://img.shields.io/npm/l/vue-collapse.svg)]() [![GitHub stars](https://img.shields.io/github/stars/cezardasilva/vue-collapse.svg?style=social&label=Star)]() [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/cezaralex)
+
+
 
 
 > A simple collapse component for vue.js
